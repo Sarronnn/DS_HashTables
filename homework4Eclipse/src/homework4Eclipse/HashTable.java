@@ -52,9 +52,7 @@ public class HashTable {
 		}
 
 		/**
-		 * Adds a new tuple to the current Entry. It does nothing if Entry already contains the incoming value. 
-		 * Increments the size of the current Graph if the Entry was previously empty
-		 * 
+		 * Adds a new tuple to the current Entry. 
 		 * @param one the first integer
 		 * @param two the second integer
 		 */
@@ -89,9 +87,7 @@ public class HashTable {
 	
 
 	HashTable(int num){
-		if (num <= 0) {
-			throw new IllegalArgumentException("The HashTable must have a size greater than 0");
-		}
+		
 		size = 0;
 		buckets = new Entry[num];
 
