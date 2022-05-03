@@ -13,8 +13,18 @@ public class Homework4 {
 	 */
 	public static boolean fourSum(int[] arr, int sum) {
 		// HINT: Consider breaking this problem down into another: Look for 2 sets of pairs where the pairs sum to our sum
-		return false;
-	}
+		LinkedList<Integer> nums = getLinkedList(arr, sum - 3);
+
+		if (nums.size() < 4) {
+			return false;
+		}
+
+		HashTable table = getTable(nums, sum - 2);
+		if (table.size() < 2) {
+		    return false;
+		}
+		    return table.hasSum(sum);
+		}
 
 	
 	/**
@@ -35,7 +45,11 @@ public class Homework4 {
 	public static boolean canGraduate(int num, int[][] prerequisites) {
 		// HINT: This is the same as finding if a cycle exists in a directed graph.
 		// If a cycle exists, no ordering exists and therefore it is impossible
-		return false;
-	}
-	
+		Graph classTaken = new Graph(num);
+
+	    for (int[] req : prerequisites) {
+	    	classTaken.addEdge(req[0], req[1]);
+	    }
+	        return !classTaken.hasCycle();
+	    }	
 }
