@@ -13,17 +13,7 @@ public class Homework4 {
 	 */
 	public static boolean fourSum(int[] arr, int sum) {
 		// HINT: Consider breaking this problem down into another: Look for 2 sets of pairs where the pairs sum to our sum
-		LinkedList<Integer> nums = getLinkedList(arr, sum - 3);
-
-		if (nums.size() < 4) {
-			return false;
-		}
-
-		HashTable table = getTable(nums, sum - 2);
-		if (table.size() < 2) {
-		    return false;
-		}
-		    return table.hasSum(sum);
+		 throw new UnsupportedOperationException("Not yet implemented");
 		}
 
 	
