@@ -41,5 +41,12 @@ public class Homework4 {
 	    	classTaken.addEdge(req[0], req[1]);
 	    }
 	        return !classTaken.hasCycle();
-	    }	
+	    }
+	
+	/*
+	 * Tests: 17/24
+	 * Style: 10
+	 * Score: 73.75
+	 * 
+	 */
 }

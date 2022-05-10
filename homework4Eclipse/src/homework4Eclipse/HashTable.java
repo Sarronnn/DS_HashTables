@@ -75,7 +75,7 @@ public class HashTable {
 		 * @param one the first integer
 		 * @param two the second integer
 		 */
-		void addUniqueVal(int one, int two) {
+		void addUniqueVal(int one, int two) { // [TE] Never used method
 			if (vals.size() == 0) {
 				key = Math.abs(one + two);
 			}
@@ -109,7 +109,7 @@ public class HashTable {
 		 */
 	public void put(int one, int two) {
 		if (one + two >= buckets.length) {
-			throw new IllegalArgumentException("Your numbers are too big for this HashTable");
+			throw new IllegalArgumentException("Your numbers are too big for this HashTable"); // [TE] Not sure this should be an error. Isn't it legal to say [1,2,3,4,100,101] looking for a sum of 106? It would error because putting (100, 101) would be a problem.
 		}
 		buckets[one + two].addVal(one, two);
 	}
